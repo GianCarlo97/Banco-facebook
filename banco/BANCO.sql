@@ -122,5 +122,11 @@ VALUES ('Gian Carlo','giancluciano@gmail.com',TO_DATE('06/06/1997','dd/mm/yyyy')
 
 --evento_endereco
 
+--5 consutas basicas
 
+--5 consutas com juncoes entre tabelas
+
+--5 consutas com group by e having
+
+--5 consutas com sub-consutas
 
