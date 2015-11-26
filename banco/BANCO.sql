@@ -183,7 +183,48 @@ VALUES ('Matheus','matheus@gmail.com',TO_DATE('25/07/1991','dd/mm/yyyy') , 'M',5
 INSERT INTO USUARIO
 VALUES ('Alan','alan@gmail.com',TO_DATE('09/09/1990','dd/mm/yyyy') , 'M',5193867514,10 ,20);
 
---inserir paginas
+--inserir paginas(NOME, CATEGORIA, DATACRIACAO, QTDCURTIDAS, EMAIL, COD_ENDERECO)
+--CATEGORIA = ('Negócios','Empresa','Marca','Artista','Entretenimento','Causa')
+INSERT INTO PAGINA
+VALUES ('PUCRS','Empresa',TO_DATE('25/07/2009','dd/mm/yyyy'),7000,'pucrs@gmail.com',1);
+INSERT INTO PAGINA
+VALUES ('Facebook','Entretenimento',TO_DATE('12/05/2008','dd/mm/yyyy'),	13245325,'facebook@gmail.com',2);
+INSERT INTO PAGINA
+VALUES ('RBS TV','Empresa',TO_DATE('20/09/2009','dd/mm/yyyy'),856422,'rbstv@gmail.com',3);
+INSERT INTO PAGINA
+VALUES ('Tirinhas Engraçadas','Entretenimento',TO_DATE('05/12/2012','dd/mm/yyyy'),10,'tirinhas@gmail.com',4);
+INSERT INTO PAGINA
+VALUES ('Sam Totman','Artista',TO_DATE('30/03/2010','dd/mm/yyyy'),58329,'samtotman@gmail.com',5);
+INSERT INTO PAGINA
+VALUES ('Ciencia da Natureza','Causa',TO_DATE('01/09/2011','dd/mm/yyyy'),5468318,'ciencia@gmail.com',6);
+INSERT INTO PAGINA
+VALUES ('ClimaTempo','Marca',TO_DATE('23/10/2010','dd/mm/yyyy'),462486,'climatempo@gmail.com',7);
+INSERT INTO PAGINA
+VALUES ('Jornal Uma Hora','Marca',TO_DATE('18/03/2015','dd/mm/yyyy'),45648,'umahora@gmail.com',8);
+INSERT INTO PAGINA
+VALUES ('Rede Cubo','Empresa',TO_DATE('26/02/2009','dd/mm/yyyy'),86456,'cubo@gmail.com',9);
+INSERT INTO PAGINA
+VALUES ('Doors','Negócios',TO_DATE('06/08/2010','dd/mm/yyyy'),354538,'doors@gmail.com',10);
+INSERT INTO PAGINA
+VALUES ('Adidos','Marca',TO_DATE('20/10/2011','dd/mm/yyyy'),46848,'adidos@gmail.com',11);
+INSERT INTO PAGINA
+VALUES ('BRTT','Artista',TO_DATE('12/04/2014','dd/mm/yyyy'),364864,'brtt@gmail.com',12);
+INSERT INTO PAGINA
+VALUES ('Jim Carrey','Artista',TO_DATE('01/03/2010','dd/mm/yyyy'),53154588,'carrey@gmail.com',13);
+INSERT INTO PAGINA
+VALUES ('Oriente','Marca',TO_DATE('11/04/2013','dd/mm/yyyy'),5457,'oriente@gmail.com',14);
+INSERT INTO PAGINA
+VALUES ('Passe Livre','Causa',TO_DATE('24/05/2013','dd/mm/yyyy'),57484,'passelivre@gmail.com',15);
+INSERT INTO PAGINA
+VALUES ('Bar do 32','Negócios',TO_DATE('25/07/2013','dd/mm/yyyy'),6485,'bar32@gmail.com',16);
+INSERT INTO PAGINA
+VALUES ('Maza','Negócios',TO_DATE('12/12/2009','dd/mm/yyyy'),544846,'maza@gmail.com',17);
+INSERT INTO PAGINA
+VALUES ('Old Spice','Empresa',TO_DATE('05/03/2010','dd/mm/yyyy'),2442534,'oldspice@gmail.com',18);
+INSERT INTO PAGINA
+VALUES ('SanSong','Empresa',TO_DATE('29/11/2012','dd/mm/yyyy'),534515,'sansong@gmail.com',19);
+INSERT INTO PAGINA
+VALUES ('NASA','Empresa',TO_DATE('09/02/2008','dd/mm/yyyy'),5348484,'nasa@gmail.com',20);
 
 --inserir grupos
 
