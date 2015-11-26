@@ -140,9 +140,48 @@ INSERT INTO ENDERECO
 VALUES(19,'MS','Campo Grande','Brasil','68975485', 96);
 INSERT INTO ENDERECO
 VALUES(20,'RN','Natal','Brasil','13467985', 12);
---inserir usuarios
+--inserir usuarios(NOME, EMAIL, DATANASC, GENERO, NUMCELULAR NUMAMIGOS, COD_ENDERECO)
+
 INSERT INTO USUARIO
 VALUES ('Gian Carlo','giancluciano@gmail.com',TO_DATE('06/06/1997','dd/mm/yyyy') , 'M',5192668962,0 ,1);
+INSERT INTO USUARIO
+VALUES ('Ghilherme Ghidorsi','ghih@gmail.com',TO_DATE('23/04/1997','dd/mm/yyyy') , 'M',5123849769,2 ,2);
+INSERT INTO USUARIO
+VALUES ('Juliana','Juliana.01@gmail.com',TO_DATE('09/04/1990','dd/mm/yyyy') , 'F',5196824587,500 ,3);
+INSERT INTO USUARIO
+VALUES ('Pedro','Pedroh@gmail.com',TO_DATE('25/09/1995','dd/mm/yyyy') , 'M',5191468358,200 ,4);
+INSERT INTO USUARIO
+VALUES ('Arthur','duds@gmail.com',TO_DATE('16/06/1999','dd/mm/yyyy') , 'M',5196835247,50 ,5);
+INSERT INTO USUARIO
+VALUES ('Ernesto','neto@gmail.com',TO_DATE('09/03/2000','dd/mm/yyyy') , 'M',5197643415,400 ,6);
+INSERT INTO USUARIO
+VALUES ('Jessica','jessica@gmail.com',TO_DATE('23/04/1997','dd/mm/yyyy') , 'F',5193764825,1000 ,7);
+INSERT INTO USUARIO
+VALUES ('Yasmin','yasmin@gmail.com',TO_DATE('24/03/1997','dd/mm/yyyy') , 'F',5197482568,455 ,8);
+INSERT INTO USUARIO
+VALUES ('Marcelo','marcelo@gmail.com',TO_DATE('19/12/1997','dd/mm/yyyy') , 'M',5195135786,230 ,9);
+INSERT INTO USUARIO
+VALUES ('Luiza','Luiza@gmail.com',TO_DATE('01/08/1999','dd/mm/yyyy') , 'F',5192668962,90 ,10);
+INSERT INTO USUARIO
+VALUES ('Ana','ana@gmail.com',TO_DATE('31/08/1997','dd/mm/yyyy') , 'F',5193486715,900 ,11);
+INSERT INTO USUARIO
+VALUES ('Thais','thais@gmail.com',TO_DATE('03/01/1992','dd/mm/yyyy') , 'F',5191834675,201 ,12);
+INSERT INTO USUARIO
+VALUES ('Junior','junior@gmail.com',TO_DATE('18/04/1998','dd/mm/yyyy') , 'M',5191864825,80 ,13);
+INSERT INTO USUARIO
+VALUES ('Rodrigo','rodrigo@gmail.com',TO_DATE('13/06/1997','dd/mm/yyyy') , 'M',5196748153,234 ,14);
+INSERT INTO USUARIO
+VALUES ('Ricardo','ricardo@gmail.com',TO_DATE('22/02/1997','dd/mm/yyyy') , 'M',5196325814,780 ,15);
+INSERT INTO USUARIO
+VALUES ('Dilma','dilma@gmail.com',TO_DATE('06/06/1980','dd/mm/yyyy') , 'F',5196665874,0 ,16);
+INSERT INTO USUARIO
+VALUES ('João','joao@gmail.com',TO_DATE('11/11/1997','dd/mm/yyyy') , 'M',5192568555,300 ,17);
+INSERT INTO USUARIO
+VALUES ('Caroline','carol@gmail.com',TO_DATE('04/08/1998','dd/mm/yyyy') , 'F',5194385675,50 ,18);
+INSERT INTO USUARIO
+VALUES ('Matheus','matheus@gmail.com',TO_DATE('25/07/1991','dd/mm/yyyy') , 'M',5198675424,5 ,19);
+INSERT INTO USUARIO
+VALUES ('Alan','alan@gmail.com',TO_DATE('09/09/1990','dd/mm/yyyy') , 'M',5193867514,10 ,20);
 
 --inserir paginas
 
