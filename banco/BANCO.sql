@@ -159,6 +159,24 @@ VALUES ('Gian Carlo','giancluciano@gmail.com',TO_DATE('06/06/1997','dd/mm/yyyy')
 --evento_endereco
 
 --5 consutas basicas
+SELECT NOME 
+FROM USUARIO
+ORDER BY NOME ASC;
+
+SELECT COUNT(*)
+FROM USUARIO
+WHERE EXTRACT (YEAR FROM DATANASC) > 1990;
+
+SELECT CIDADE
+FROM ENDERECO
+WHERE ESTADO LIKE 'RS';
+
+SELECT NOME
+FROM USUARIO
+WHERE GENERO IN 'M';
+
+SELECT COUNT(DISTINCT ESTADO)
+FROM ENDERECO;
 
 --5 consutas com juncoes entre tabelas
 
