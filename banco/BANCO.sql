@@ -1,3 +1,6 @@
+-- dar drop em cod_endereco de eventos e categoria em grupo
+
+
 CREATE TABLE USUARIO(
   NOME VARCHAR(20) NOT NULL,
   EMAIL VARCHAR(50) NOT NULL,
@@ -43,11 +46,9 @@ CREATE TABLE EVENTO(
   DATAEVENTO DATE NOT NULL,
   NUMCONFIRMADOS NUMBER(8),
   STATUS VARCHAR(20) NOT NULL,
-  COD_ENDERECO NUMBER(8),
   
   CONSTRAINT PK_EVENTO PRIMARY KEY(IDEVENTO),
   CONSTRAINT CK_STATUS_EVENTO CHECK (STATUS IN ('Publico', 'Privado')),
-  CONSTRAINT FK_ENDERECO_EVENTO FOREIGN KEY (COD_ENDERECO)REFERENCES ENDERECO
 );
 
 CREATE TABLE ENDERECO(
@@ -267,16 +268,213 @@ INSERT INTO GRUPO
 VALUES ('Banco de dados PUCRS','Secreto','Grupo para a cadeira de banco da pucrs',19,20);
 INSERT INTO GRUPO
 VALUES ('Animais perdidos','Publico','Grupo para encontrar donos para animais abandonados',20,100);
---inserir evencos
+--inserir evencos(NOME, IDEVENTO, DATAEVENTO, NUMCONFIRMADOS, STATUS)
+--STATUS ('Publico', 'Privado')
+INSERT INTO EVENTO
+VALUES('Festa de termino das aulas na casa do Rodrigo',1,TO_DATE('27/11/2015','dd/mm/yyyy'),2000,'Publico');
+INSERT INTO EVENTO
+VALUES('Protesto para liberar o Uber',2,TO_DATE('1/12/2015','dd/mm/yyyy'),3000,'Publico');
+INSERT INTO EVENTO
+VALUES('Festa De aniversario do Ghilherme',3,TO_DATE('29/11/2015','dd/mm/yyyy'),3,'Privado');
+INSERT INTO EVENTO
+VALUES('Formatura da turma',4,TO_DATE('28/12/2020','dd/mm/yyyy'),300,'Publico');
+INSERT INTO EVENTO
+VALUES('Passeada para o fim da fome',5,TO_DATE('12/04/2016','dd/mm/yyyy'),20,'Publico');
+INSERT INTO EVENTO
+VALUES('Encontro para programar',6,TO_DATE('13/12/2015','dd/mm/yyyy'),10,'Privado');
+INSERT INTO EVENTO
+VALUES('Festa de fim de ano',7,TO_DATE('28/12/2015','dd/mm/yyyy'),100,'Publico');
+INSERT INTO EVENTO
+VALUES('Estudo para prova',8,TO_DATE('19/11/2015','dd/mm/yyyy'),10,'Privado');
+INSERT INTO EVENTO
+VALUES('Toboagua Gigante',9,TO_DATE('30/11/2015','dd/mm/yyyy'),1000,'Publico');
+INSERT INTO EVENTO
+VALUES('GreNal Domingo',10,TO_DATE('22/11/2015','dd/mm/yyyy'),13000,'Publico');
+INSERT INTO EVENTO
+VALUES('Visita ao museu',11,TO_DATE('12/12/2015','dd/mm/yyyy'),5,'Publico');
+INSERT INTO EVENTO
+VALUES('Almoco comemorativo',12,TO_DATE('5/12/2015','dd/mm/yyyy'),30,'Privado');
+INSERT INTO EVENTO
+VALUES('Encontro para troca de materiais',13,TO_DATE('04/04/2016','dd/mm/yyyy'),100,'Publico');
+INSERT INTO EVENTO
+VALUES('Piquenique de amigos',14,TO_DATE('13/12/2015','dd/mm/yyyy'),40,'Privado');
+INSERT INTO EVENTO
+VALUES('Passeio ao museu da Puc',15,TO_DATE('17/08/2016','dd/mm/yyyy'),234,'Publico');
+INSERT INTO EVENTO
+VALUES('Aniversario do Max',16,TO_DATE('09/09/2015','dd/mm/yyyy'),30,'Privado');
+INSERT INTO EVENTO
+VALUES('Encontro na Redenção',17,TO_DATE('15/06/2016','dd/mm/yyyy'),100,'Publico');
+INSERT INTO EVENTO
+VALUES('Palestra de Banco',18,TO_DATE('23/03/2017','dd/mm/yyyy'),70,'Publico');
+INSERT INTO EVENTO
+VALUES('Inauguração de um restaurante',19,TO_DATE('23/05/2016','dd/mm/yyyy'),23,'Publico');
+INSERT INTO EVENTO
+VALUES('Exposição de artes',20,TO_DATE('25/01/2016','dd/mm/yyyy'),234,'Publico');
 
---inserir usuario-pagica
-
+--inserir usuario-pagica(EMAIL , NOME PAGINA)
+INSERT INTO USUARIO_PAGINA
+VALUES ('giancluciano@gmail.com','Facebook');
+INSERT INTO USUARIO_PAGINA
+VALUES ('ghih@gmail.com','Tirinhas Engraçadas');
+INSERT INTO USUARIO_PAGINA
+VALUES ('Juliana.01@gmail.com','RBS TV');
+INSERT INTO USUARIO_PAGINA
+VALUES ('Pedroh@gmail.com','Ciencia da Natureza');
+INSERT INTO USUARIO_PAGINA
+VALUES ('duds@gmail.com','ClimaTempo');
+INSERT INTO USUARIO_PAGINA
+VALUES ('neto@gmail.com','Jornal Uma Hora');
+INSERT INTO USUARIO_PAGINA
+VALUES ('jessica@gmail.com','Jornal Uma Hora');
+INSERT INTO USUARIO_PAGINA
+VALUES ('yasmin@gmail.com','Jim Carrey');
+INSERT INTO USUARIO_PAGINA
+VALUES ('marcelo@gmail.com','Oriente');
+INSERT INTO USUARIO_PAGINA
+VALUES ('Luiza@gmail.com','Passe Livre');
+INSERT INTO USUARIO_PAGINA
+VALUES ('ana@gmail.com','Bar do 32');
+INSERT INTO USUARIO_PAGINA
+VALUES ('thais@gmail.com','BRTT');
+INSERT INTO USUARIO_PAGINA
+VALUES ('junior@gmail.com','Adidos');
+INSERT INTO USUARIO_PAGINA
+VALUES ('rodrigo@gmail.com','Maza');
+INSERT INTO USUARIO_PAGINA
+VALUES ('ricardo@gmail.com','Old Spice');
+INSERT INTO USUARIO_PAGINA
+VALUES ('dilma@gmail.com','Old Spice');
+INSERT INTO USUARIO_PAGINA
+VALUES ('joao@gmail.com','NASA');
+INSERT INTO USUARIO_PAGINA
+VALUES ('carol@gmail.com','Rede Cubo');
+INSERT INTO USUARIO_PAGINA
+VALUES ('matheus@gmail.com','Sam Totman');
+INSERT INTO USUARIO_PAGINA
+VALUES ('alan@gmail.com','Sam Totman');
 --usuario_grupo
-
+INSERT INTO USUARIO_GRUPO
+VALUES ('giancluciano@gmail.com',1);
+INSERT INTO USUARIO_GRUPO
+VALUES ('ghih@gmail.com',2);
+INSERT INTO USUARIO_GRUPO
+VALUES ('Juliana.01@gmail.com',3);
+INSERT INTO USUARIO_GRUPO
+VALUES ('Pedroh@gmail.com',4);
+INSERT INTO USUARIO_GRUPO
+VALUES ('duds@gmail.com',6);
+INSERT INTO USUARIO_GRUPO
+VALUES ('neto@gmail.com',5);
+INSERT INTO USUARIO_GRUPO
+VALUES ('jessica@gmail.com',5);
+INSERT INTO USUARIO_GRUPO
+VALUES ('yasmin@gmail.com',7);
+INSERT INTO USUARIO_GRUPO
+VALUES ('marcelo@gmail.com',8);
+INSERT INTO USUARIO_GRUPO
+VALUES ('Luiza@gmail.com',9);
+INSERT INTO USUARIO_GRUPO
+VALUES ('ana@gmail.com',10);
+INSERT INTO USUARIO_GRUPO
+VALUES ('thais@gmail.com',11);
+INSERT INTO USUARIO_GRUPO
+VALUES ('junior@gmail.com',13);
+INSERT INTO USUARIO_GRUPO
+VALUES ('rodrigo@gmail.com',12);
+INSERT INTO USUARIO_GRUPO
+VALUES ('ricardo@gmail.com',12);
+INSERT INTO USUARIO_GRUPO
+VALUES ('dilma@gmail.com',19);
+INSERT INTO USUARIO_GRUPO
+VALUES ('joao@gmail.com',18);
+INSERT INTO USUARIO_GRUPO
+VALUES ('carol@gmail.com',17);
+INSERT INTO USUARIO_GRUPO
+VALUES ('matheus@gmail.com',16);
+INSERT INTO USUARIO_GRUPO
+VALUES ('alan@gmail.com',15);
 --usuario_evento
-
+INSERT INTO USUARIO_EVENTO
+VALUES ('giancluciano@gmail.com',1);
+INSERT INTO USUARIO_EVENTO
+VALUES ('ghih@gmail.com',2);
+INSERT INTO USUARIO_EVENTO
+VALUES ('Juliana.01@gmail.com',3);
+INSERT INTO USUARIO_EVENTO
+VALUES ('Pedroh@gmail.com',4);
+INSERT INTO USUARIO_EVENTO
+VALUES ('duds@gmail.com',6);
+INSERT INTO USUARIO_EVENTO
+VALUES ('neto@gmail.com',5);
+INSERT INTO USUARIO_EVENTO
+VALUES ('jessica@gmail.com',5);
+INSERT INTO USUARIO_EVENTO
+VALUES ('yasmin@gmail.com',7);
+INSERT INTO USUARIO_EVENTO
+VALUES ('marcelo@gmail.com',8);
+INSERT INTO USUARIO_EVENTO
+VALUES ('Luiza@gmail.com',9);
+INSERT INTO USUARIO_EVENTO
+VALUES ('ana@gmail.com',10);
+INSERT INTO USUARIO_EVENTO
+VALUES ('thais@gmail.com',11);
+INSERT INTO USUARIO_EVENTO
+VALUES ('junior@gmail.com',13);
+INSERT INTO USUARIO_EVENTO
+VALUES ('rodrigo@gmail.com',12);
+INSERT INTO USUARIO_EVENTO
+VALUES ('ricardo@gmail.com',12);
+INSERT INTO USUARIO_EVENTO
+VALUES ('dilma@gmail.com',19);
+INSERT INTO USUARIO_EVENTO
+VALUES ('joao@gmail.com',18);
+INSERT INTO USUARIO_EVENTO
+VALUES ('carol@gmail.com',17);
+INSERT INTO USUARIO_EVENTO
+VALUES ('matheus@gmail.com',16);
+INSERT INTO USUARIO_EVENTO
+VALUES ('alan@gmail.com',15);
 --evento_endereco
-
+INSERT INTO EVENTO_ENDERECO
+VALUES (1,1);
+INSERT INTO EVENTO_ENDERECO
+VALUES (2,2);
+INSERT INTO EVENTO_ENDERECO
+VALUES (3,3);
+INSERT INTO EVENTO_ENDERECO
+VALUES (4,4);
+INSERT INTO EVENTO_ENDERECO
+VALUES (5,5);
+INSERT INTO EVENTO_ENDERECO
+VALUES (6,6);
+INSERT INTO EVENTO_ENDERECO
+VALUES (7,7);
+INSERT INTO EVENTO_ENDERECO
+VALUES (8,7);
+INSERT INTO EVENTO_ENDERECO
+VALUES (8,8);
+INSERT INTO EVENTO_ENDERECO
+VALUES (9,9);
+INSERT INTO EVENTO_ENDERECO
+VALUES (10,10);
+INSERT INTO EVENTO_ENDERECO
+VALUES (11,11);
+INSERT INTO EVENTO_ENDERECO
+VALUES (12,12);
+INSERT INTO EVENTO_ENDERECO
+VALUES (13,13);
+INSERT INTO EVENTO_ENDERECO
+VALUES (14,14);
+INSERT INTO EVENTO_ENDERECO
+VALUES (15,15);
+INSERT INTO EVENTO_ENDERECO
+VALUES (16,16);
+INSERT INTO EVENTO_ENDERECO
+VALUES (17,17);
+INSERT INTO EVENTO_ENDERECO
+VALUES (18,18);
+INSERT INTO EVENTO_ENDERECO
+VALUES (19,20);
 --5 consultas basicas
 SELECT NOME FROM USUARIO ORDER BY NOME ASC;
 
