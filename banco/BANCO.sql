@@ -161,7 +161,7 @@ VALUES ('Yasmin','yasmin@gmail.com',TO_DATE('24/03/1997','dd/mm/yyyy') , 'F',519
 INSERT INTO USUARIO
 VALUES ('Marcelo','marcelo@gmail.com',TO_DATE('19/12/1997','dd/mm/yyyy') , 'M',5195135786,230 ,9);
 INSERT INTO USUARIO
-VALUES ('Luiza','Luiza@gmail.com',TO_DATE('01/08/1999','dd/mm/yyyy') , 'F',5192668962,90 ,10);
+VALUES ('Luiza','Luiza@gmail.com',TO_DATE('01/08/1999','dd/mm/yyyy') , 'F',5192846753,90 ,10);
 INSERT INTO USUARIO
 VALUES ('Ana','ana@gmail.com',TO_DATE('31/08/1997','dd/mm/yyyy') , 'F',5193486715,900 ,11);
 INSERT INTO USUARIO
