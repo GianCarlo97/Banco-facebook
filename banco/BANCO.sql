@@ -48,7 +48,7 @@ CREATE TABLE EVENTO(
   STATUS VARCHAR(20) NOT NULL,
   
   CONSTRAINT PK_EVENTO PRIMARY KEY(IDEVENTO),
-  CONSTRAINT CK_STATUS_EVENTO CHECK (STATUS IN ('Publico', 'Privado')),
+  CONSTRAINT CK_STATUS_EVENTO CHECK (STATUS IN ('Publico', 'Privado'))
 );
 
 CREATE TABLE ENDERECO(
@@ -228,7 +228,7 @@ VALUES ('NASA','Empresa',TO_DATE('09/02/2008','dd/mm/yyyy'),5348484,'nasa@gmail.
 
 --inserir grupos(NOME, STATUS, DESCRICAO, NUMEROGRUPO, QNTDMEMBROS)
 -- STATUS ('Publico', 'Fechado', 'Secreto')
-INSERT INTO GRUPO
+INSERT INTO GRUPO 
 VALUES ('Familia','Secreto','Grupo da familia',1,10);
 INSERT INTO GRUPO
 VALUES ('Turma','Fechado','Grupo da turma',2,20);
@@ -271,7 +271,7 @@ VALUES ('Animais perdidos','Publico','Grupo para encontrar donos para animais ab
 --inserir evencos(NOME, IDEVENTO, DATAEVENTO, NUMCONFIRMADOS, STATUS)
 --STATUS ('Publico', 'Privado')
 INSERT INTO EVENTO
-VALUES('Festa de termino das aulas na casa do Rodrigo',1,TO_DATE('27/11/2015','dd/mm/yyyy'),2000,'Publico');
+VALUES('Festa na casa do Rodrigo',1,TO_DATE('27/11/2015','dd/mm/yyyy'),2000,'Publico');
 INSERT INTO EVENTO
 VALUES('Protesto para liberar o Uber',2,TO_DATE('1/12/2015','dd/mm/yyyy'),3000,'Publico');
 INSERT INTO EVENTO
@@ -452,7 +452,7 @@ VALUES (7,7);
 INSERT INTO EVENTO_ENDERECO
 VALUES (8,7);
 INSERT INTO EVENTO_ENDERECO
-VALUES (8,8);
+VALUES (20,8);
 INSERT INTO EVENTO_ENDERECO
 VALUES (9,9);
 INSERT INTO EVENTO_ENDERECO
