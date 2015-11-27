@@ -29,7 +29,6 @@ CREATE TABLE PAGINA(
 CREATE TABLE GRUPO(
   NOME VARCHAR(40) NOT NULL,
   STATUS VARCHAR(40) NOT NULL,
-  CATEGORIA VARCHAR(20) NULL,
   DESCRICAO VARCHAR(200) NULL,
   NUMEROGRUPO NUMBER(38) NOT NULL,
   QNTDMEMBROS NUMBER(6) NOT NULL,
@@ -226,8 +225,48 @@ VALUES ('SanSong','Empresa',TO_DATE('29/11/2012','dd/mm/yyyy'),534515,'sansong@g
 INSERT INTO PAGINA
 VALUES ('NASA','Empresa',TO_DATE('09/02/2008','dd/mm/yyyy'),5348484,'nasa@gmail.com',20);
 
---inserir grupos
-
+--inserir grupos(NOME, STATUS, DESCRICAO, NUMEROGRUPO, QNTDMEMBROS)
+-- STATUS ('Publico', 'Fechado', 'Secreto')
+INSERT INTO GRUPO
+VALUES ('Familia','Secreto','Grupo da familia',1,10);
+INSERT INTO GRUPO
+VALUES ('Turma','Fechado','Grupo da turma',2,20);
+INSERT INTO GRUPO
+VALUES ('Amigos','Fechado','Grupo para amigos',3,50);
+INSERT INTO GRUPO
+VALUES ('Esporte','Publico','Grupo para reunir times para esportes',4,100);
+INSERT INTO GRUPO
+VALUES ('ES FACIN/PUCRS','Fechado','grupo para alunos do curso de ES',5,96);
+INSERT INTO GRUPO
+VALUES ('Trabalho','Secreto','Grupo para os funcionarios se comunicarem',6,40);
+INSERT INTO GRUPO
+VALUES ('Filmes','Publico','Grupo para qualquer um conversar sobre os filmes',7,200);
+INSERT INTO GRUPO
+VALUES ('Projeto x','Secreto','Grupo para realização do projeto x',8,5);
+INSERT INTO GRUPO
+VALUES ('Estudos','Fechado','Grupo para troca de materiais de estudos',9,100);
+INSERT INTO GRUPO
+VALUES ('Organização de eventos','Publico','Grupo para ajudar as pessoas a organizar eventos',10,300);
+INSERT INTO GRUPO
+VALUES ('Encontros','Publico','Grupo para pessoas se conhecerem',11,500);
+INSERT INTO GRUPO
+VALUES ('Doações','Publico','Grupo para doar produtos',12,100);
+INSERT INTO GRUPO
+VALUES ('Vendas','Publico','grupo para vender produtos para os clientes',13,0);
+INSERT INTO GRUPO
+VALUES ('Jogos Online','Publico','Grupo para conversar sobre jogos online',14,0);
+INSERT INTO GRUPO
+VALUES ('Times de Futebol','Publico','Grupo para torcedores se reunirem para torcer',15,1000);
+INSERT INTO GRUPO
+VALUES ('Musicas','Publico','Grupo para trocas de musicas',16,340);
+INSERT INTO GRUPO
+VALUES ('PUCRS','Fechado','Grupo para todos os alunos que estudam na puc',17,2000);
+INSERT INTO GRUPO
+VALUES ('Livros','Fechado','Grupo para troca de livros',18,60);
+INSERT INTO GRUPO
+VALUES ('Banco de dados PUCRS','Secreto','Grupo para a cadeira de banco da pucrs',19,20);
+INSERT INTO GRUPO
+VALUES ('Animais perdidos','Publico','Grupo para encontrar donos para animais abandonados',20,100);
 --inserir evencos
 
 --inserir usuario-pagica
